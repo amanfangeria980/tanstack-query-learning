@@ -14,6 +14,8 @@ const PostsRQ = () => {
             const response = await axios.get("http://localhost:8000/posts");
             return response.data;
         },
+        // this means that data will be assumed fresh for 30 seconds, usually it's moved to stale after fetching as by default staleTime is 0
+        staleTime: 30000,
     });
     if (isLoading) return <div>Loading...</div>;
     if (isError) return <div>Error : {error.message}</div>;
