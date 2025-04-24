@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 interface Post {
     id: number;
@@ -24,10 +25,12 @@ const PostsRQ = () => {
         <div className="post-list">
             <button onClick={() => refetch()}>Fetch Posts</button>
             {data?.map((post) => (
-                <div key={post.id} className="post-item">
-                    <h3 className="post-title">{post.title}</h3>
-                    <p className="post-body">{post.body}</p>
-                </div>
+                <Link to={`/posts-rq/${post.id}`}>
+                    <div key={post.id} className="post-item">
+                        <h3 className="post-title">{post.title}</h3>
+                        <p className="post-body">{post.body}</p>
+                    </div>
+                </Link>
             ))}
         </div>
     );

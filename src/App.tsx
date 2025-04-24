@@ -4,6 +4,7 @@ import PostsTraditional from "./components/PostsTraditional";
 import PostsRQ from "./components/PostsRQ";
 import "./App.css";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import PostDetailsRQ from "./components/PostDetailsRQ";
 const App = () => {
     return (
         <BrowserRouter>
@@ -25,6 +26,7 @@ const App = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/posts" element={<PostsTraditional />} />
                     <Route path="/posts-rq" element={<PostsRQ />} />
+                    <Route path="/posts-rq/:id" element={<PostDetailsRQ />} />
                 </Routes>
             </div>
         </BrowserRouter>
