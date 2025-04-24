@@ -5,6 +5,7 @@ import PostsRQ from "./components/PostsRQ";
 import "./App.css";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import PostDetailsRQ from "./components/PostDetailsRQ";
+import PaginatedQueries from "./components/PaginatedQueries";
 const App = () => {
     return (
         <BrowserRouter>
@@ -20,6 +21,11 @@ const App = () => {
                         <li>
                             <Link to="/posts-rq">RQ Posts</Link>
                         </li>
+                        <li>
+                            <Link to="/paginated-queries">
+                                Paginated Queries
+                            </Link>
+                        </li>
                     </ul>
                 </nav>
                 <Routes>
@@ -27,6 +33,10 @@ const App = () => {
                     <Route path="/posts" element={<PostsTraditional />} />
                     <Route path="/posts-rq" element={<PostsRQ />} />
                     <Route path="/posts-rq/:id" element={<PostDetailsRQ />} />
+                    <Route
+                        path="/paginated-queries"
+                        element={<PaginatedQueries />}
+                    />
                 </Routes>
             </div>
         </BrowserRouter>

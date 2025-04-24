@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import React from "react";
-import { useParams } from "react-router-dom";
 import axios from "axios";
+import { useParams } from "react-router-dom";
+
 const PostDetailsRQ = () => {
     const { id } = useParams();
     const { data, isLoading, isError, error } = useQuery({
