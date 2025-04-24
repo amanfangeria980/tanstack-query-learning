@@ -8,24 +8,21 @@ interface Post {
 }
 
 const PostsRQ = () => {
-    const { data, isLoading, isError, error } = useQuery<Post[]>({
+    const { data, isLoading, isError, error, refetch } = useQuery<Post[]>({
         queryKey: ["posts"],
         queryFn: async () => {
             const response = await axios.get("http://localhost:8000/posts");
             return response.data;
         },
-        // this is the bydefault value
-        // refetchInterval:false
-        // for polling we use this, to make api call after every 3 seconds
-        // refetchInterval: 3000,
-        // if we want to keep polling data even in the background
-        // refetchIntervalInBackground: true,
+        // enabled: false, can be added so that it doesn't fetch data on mount
+        enabled: false,
     });
     if (isLoading) return <div>Loading...</div>;
     if (isError) return <div>Error : {error.message}</div>;
     console.log(data);
     return (
         <div className="post-list">
+            <button onClick={() => refetch()}>Fetch Posts</button>
             {data?.map((post) => (
                 <div key={post.id} className="post-item">
                     <h3 className="post-title">{post.title}</h3>
