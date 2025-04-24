@@ -32,5 +32,87 @@
             "title": "Learn React Context",
             "completed": false
         }
+    ],
+    "fruits": [
+        {
+            "id": 1,
+            "name": "Apple"
+        },
+        {
+            "id": 2,
+            "name": "Banana"
+        },
+        {
+            "id": 3,
+            "name": "Orange"
+        },
+        {
+            "id": 4,
+            "name": "Mango"
+        },
+        {
+            "id": 5,
+            "name": "Pineapple"
+        },
+        {
+            "id": 6,
+            "name": "Grapes"
+        },
+        {
+            "id": 7,
+            "name": "Watermelon"
+        },
+        {
+            "id": 8,
+            "name": "Strawberry"
+        },
+        {
+            "id": 9,
+            "name": "Kiwi"
+        },
+        {
+            "id": 10,
+            "name": "Pomegranate"
+        },
+        {
+            "id": 11,
+            "name": "Cherry"
+        },
+        {
+            "id": 12,
+            "name": "Lemon"
+        },
+        {
+            "id": 13,
+            "name": "Lime"
+        },
+        {
+            "id": 14,
+            "name": "Peach"
+        },
+        {
+            "id": 15,
+            "name": "Pear"
+        },
+        {
+            "id": 16,
+            "name": "Plum"
+        },
+        {
+            "id": 17,
+            "name": "Raspberry"
+        },
+        {
+            "id": 18,
+            "name": "Blueberry"
+        },
+        {
+            "id": 19,
+            "name": "Blackberry"
+        },
+        {
+            "id": 20,
+            "name": "Pineapple"
+        }
     ]
 }
